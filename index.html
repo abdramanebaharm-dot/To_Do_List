@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>To-Do List</title>
+  <link rel="stylesheet" href="style.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet"/>
+</head>
+<body>
+
+  <div class="app">
+    <header class="header">
+      <div class="header-accent"></div>
+      <h1 class="title">Ma Liste</h1>
+      <p class="subtitle">Organisez votre journée</p>
+    </header>
+
+    <div class="input-area">
+      <input
+        type="text"
+        id="taskInput"
+        class="task-input"
+        placeholder="Ajouter une nouvelle tâche..."
+        maxlength="80"
+      />
+      <button id="addBtn" class="add-btn" title="Ajouter">
+        <span class="plus-icon">+</span>
+      </button>
+    </div>
+
+    <div class="filters">
+      <button class="filter-btn active" data-filter="all">Toutes</button>
+      <button class="filter-btn" data-filter="active">À faire</button>
+      <button class="filter-btn" data-filter="done">Terminées</button>
+    </div>
+
+    <ul class="task-list" id="taskList">
+      
+    </ul>
+
+    <footer class="footer">
+      <span id="taskCount">0 tâche(s) restante(s)</span>
+      <button id="clearDone" class="clear-btn">Effacer terminées</button>
+    </footer>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
